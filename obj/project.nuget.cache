@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DhsunyxtZ2k=",
+  "dgSpecHash": "7IpSQZTsqIc=",
   "success": true,
   "projectFilePath": "D:\\horizon\\Horizon.Events\\Horizon.Events.csproj",
   "expectedPackageFiles": [
+    "D:\\NugetCache\\awssdk.core\\4.0.102.6\\awssdk.core.4.0.102.6.nupkg.sha512",
+    "D:\\NugetCache\\awssdk.s3\\4.0.103.4\\awssdk.s3.4.0.103.4.nupkg.sha512",
     "D:\\NugetCache\\carter\\8.2.1\\carter.8.2.1.nupkg.sha512",
     "D:\\NugetCache\\carter.analyzers\\8.2.1\\carter.analyzers.8.2.1.nupkg.sha512",
     "D:\\NugetCache\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",

@@ -55,6 +55,10 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[4.0.103.4, )"
+            },
             "Carter": {
               "target": "Package",
               "version": "[8.2.1, )"

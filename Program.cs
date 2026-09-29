@@ -1,5 +1,9 @@
 
 
+using Amazon;
+using Amazon.Runtime;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +24,17 @@ builder.Services.AddMapster();
 
 // JWT + políticas de autorización
 builder.Services.AddJwtSecurity();
+
+// Configuración de AWS (llega por variables de entorno en el compose)
+builder.Services.Configure<AwsOptions>(builder.Configuration.GetSection(AwsOptions.SectionName));
+
+builder.Services.AddSingleton<IAmazonS3>(sp =>
+{
+    var options = builder.Configuration.GetSection(AwsOptions.SectionName).Get<AwsOptions>()!;
+    var credentials = new BasicAWSCredentials(options.AccessKey, options.SecretKey);
+    var config = new AmazonS3Config { RegionEndpoint = RegionEndpoint.GetBySystemName(options.Region) };
+    return new AmazonS3Client(credentials, config);
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

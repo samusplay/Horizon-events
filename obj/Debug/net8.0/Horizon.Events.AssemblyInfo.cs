@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Horizon.Events")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b719bfbd80c5f0f0610d08c7ae05ab376cf015ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44475f29ff7a5c6e3657fcbd4d2bc8a8a02b638e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Horizon.Events")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Horizon.Events")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
