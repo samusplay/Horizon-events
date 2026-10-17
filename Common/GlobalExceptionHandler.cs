@@ -3,6 +3,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Horizon.Events.Common.Exceptions;
 
 namespace Horizon.Events.Common;
 
@@ -15,9 +16,11 @@ public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IE
         var (statusCode, title) = exception switch
         {
             ValidationException => (StatusCodes.Status400BadRequest, "Error de validación"),
+            NotFoundException => (StatusCodes.Status404NotFound, "No encontrado"),
             UnauthorizedAccessException => (StatusCodes.Status401Unauthorized, "No autorizado"),
             _ => (StatusCodes.Status500InternalServerError, "Error interno del servidor")
         };
+
 
         httpContext.Response.StatusCode = statusCode;
 

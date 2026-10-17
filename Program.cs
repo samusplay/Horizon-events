@@ -22,6 +22,9 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBeh
 // Mapster
 builder.Services.AddMapster();
 
+builder.Services.AddHttpClient<MediaServerStats>(client => client.Timeout = TimeSpan.FromSeconds(3));
+builder.Services.AddHostedService<StreamSyncService>();
+
 // JWT + políticas de autorización
 builder.Services.AddJwtSecurity();
 

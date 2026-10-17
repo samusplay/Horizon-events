@@ -10,3 +10,4 @@ global using Horizon.Events.Persistence;
 global using Horizon.Events.Security;
 
 global using Amazon.S3;
+global using Horizon.Events.Streaming;
